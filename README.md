@@ -1,7 +1,10 @@
 # Node-HH-Talk-GRPC-Web-Primer
 This repo is for the GRPC-web Primer talk given by
 [@chopmann](https://github.com/chopmann) and
-[@jacobtheevans](https://github.com/JacobTheEvans). [Video of talk]()
+[@jacobtheevans](https://github.com/JacobTheEvans).
+
+[Video of talk]()
+
 [Meetup Link](https://www.meetup.com/node-HH/events/256369315/)
 
 
