@@ -2,7 +2,7 @@
 const grpc = require('grpc')
 const protoLoader = require('@grpc/proto-loader')
 
-const PROTO_PATH = `${__dirname}/todo.proto`
+const PROTO_PATH = `${__dirname}/../todo.proto`
 
 const packageDefinition = protoLoader.loadSync(
   PROTO_PATH,
