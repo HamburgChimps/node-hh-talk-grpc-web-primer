@@ -22,7 +22,7 @@ To build and use the protobufs in this application run the following in /example
 To build a new frontend react application run the following in /example/frontend
 
 ```bash
-npm build
+npm run build
 ```
 
 # Run Project

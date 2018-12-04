@@ -2,13 +2,13 @@ syntax = "proto3";
 package todo;
 
 service Todo {
-  rpc HelloWorld (HelloRequest) returns (HelloReply);
+  rpc Acknowledge (AcknowledgeRequest) returns (AcknowledgeReply);
 }
 
-message HelloRequest {
+message AcknowledgeRequest {
   string name = 1;
 }
 
-message HelloReply {
+message AcknowledgeReply {
   string message = 1;
 }

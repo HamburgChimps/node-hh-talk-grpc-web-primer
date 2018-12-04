@@ -1,16 +1,21 @@
-import { HelloRequest } from './todo_pb.js'
+import { AcknowledgeRequest } from './todo_pb.js'
 import { TodoClient } from './todo_grpc_web_pb.js'
 
 class Todo {
   constructor () {
-    const client = new TodoClient('http://localhost:8080')
-    const request = new HelloRequest()
-    request.setName('World')
+    this._client = new TodoClient('http://localhost:8080')
+  }
 
-    client.helloWorld(request, {}, (err, response) => {
-      if (err) console.log('Error in hello world', err)
-      const data = response.getMessage()
-      console.log(data)
+  start (name) {
+    return new Promise((resolve, reject) => {
+      const request = new AcknowledgeRequest()
+      request.setName(name)
+
+      this._client.acknowledge(request, {}, (err, response) => {
+        if (err) return reject(err)
+        const data = response.getMessage()
+        resolve(data)
+      })
     })
   }
 }
