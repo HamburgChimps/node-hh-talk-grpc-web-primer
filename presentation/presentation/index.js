@@ -112,7 +112,7 @@ class Presentation extends Component {
             <ListItem>What is grpc-web?</ListItem>
             <ListItem>Closer look at grpc-web</ListItem>
             <ListItem>Example grpc-web project</ListItem>
-            <ListItem>Discuss grpc-web</ListItem>
+            <ListItem>Grpc-web</ListItem>
           </List>
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='primary'>
@@ -175,7 +175,7 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='primary'>
           <Heading size={6} textColor='secondary' caps>Other important concepts</Heading>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>Deadlines/Timeouts</Text>
+          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} x>Deadlines/Timeouts</Text>
           <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>GRPC allows clients to specify how long they are willing to wait for an RPC to complete before the RPC is terminated with the error DEADLINE_EXCEEDED. On the server side, the server can query to see if a particular RPC has timed out, or how much time is left to complete the RPC.</Text>
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>RPC Termination</Text>
           <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>In gRPC, both the client and server make independent and local determinations of the success of the call, and their conclusions may not match. This means that, for example, you could have an RPC that finishes successfully on the server side (“I have sent all my responses!”) but fails on the client side (“The responses arrived after my deadline!”). It’s also possible for a server to decide to complete before a client has sent all its requests.</Text>
@@ -188,6 +188,40 @@ class Presentation extends Component {
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
             GRPC-Web
           </Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>What is gRPC WEb?</Heading>
+          <BlockQuote>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>gRPC web is a library that allows browsers to run gRPC</Text>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>It providers a Code Generator Plugin for protoc that outputs browser ready code.</Text>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>Check it out on github.com/grpc/grpc-web</Text>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>What does it give?</Heading>
+          <BlockQuote>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>{`{service}/_pub.js}`} The compiled client code.</Text>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>{`{service}/web_pub.js}`} The compiled requests code.</Text>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>Architecture</Heading>
+          {'Core put image here'}
+          <Image padding={'20px 0px'} src={WhatIsGrpcImage} height={300} />
+        </Slide>
+        <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>Using it in React</Heading>
+          <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Modify your build step babel build step to support commonjs modules.</Text>
+          <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Use normal your React webpack build.</Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>Example Project</Heading>
+          <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Checkout the project here</Text>
+          <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>github.com/JacobTheEvans/christmas-cards</Text>
+        </Slide>
+        <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
+          <Heading size={5} textColor='secondary' caps>Discussion</Heading>
+          <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Write questions</Text>
         </Slide>
       </Deck>
     )
