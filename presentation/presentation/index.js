@@ -1,21 +1,16 @@
 import React, { Component } from 'react'
+import createTheme from 'spectacle/lib/themes/default'
 import {
   BlockQuote,
-  Cite,
   Deck,
   Heading,
   ListItem,
   List,
-  Quote,
   Image,
   Slide,
   Text,
   CodePane
 } from 'spectacle'
-import WhatIsGrpcImage from '../assets/grpc.svg'
-import GeneralArch from '../assets/general.svg'
-import Build from '../assets/build.svg'
-import ChristmasArch from '../assets/arch.svg'
 
 // move to other files
 const protobufExample = `// The greeter service definition.
@@ -66,8 +61,6 @@ const gRPCBidirectionalStreaming = `
 rpc BidiHello(stream HelloRequest) returns (stream HelloResponse){
 }
 `
-
-import createTheme from 'spectacle/lib/themes/default'
 
 require('normalize.css')
 
@@ -129,7 +122,7 @@ class Presentation extends Component {
             <ListItem>Support on all major languages</ListItem>
             <ListItem>Uses Protocol Buffers by default</ListItem>
           </List>
-          <Image padding={'20px 0px'} src={WhatIsGrpcImage} height={300} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/2zDVS5K.png'} height={300} />
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='tertiary'>
           <Heading size={6} textColor='secondary' caps>What are Protobufs?</Heading>
@@ -141,7 +134,7 @@ class Presentation extends Component {
             <ListItem>Forward- and Backward-compatible</ListItem>
           </List>
           <CodePane
-            lang='go'
+            lang='javascript'
             source={protobufExample}
           />
         </Slide>
@@ -154,7 +147,7 @@ class Presentation extends Component {
           <Heading size={6} textColor='secondary' caps>Services</Heading>
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types.</Text>
           <CodePane
-            lang='go'
+            lang='javascript'
             source={grpcServiceExample}
           />
         </Slide>
@@ -163,19 +156,19 @@ class Presentation extends Component {
           <List>
             <ListItem>
               Unary RPCs
-              <CodePane lang='go' source={grpcUnary} />
+              <CodePane lang='javascript' source={grpcUnary} />
             </ListItem>
             <ListItem>
               Server streaming RPCs
-              <CodePane lang='go' source={grpcServerStreaming} />
+              <CodePane lang='javascript' source={grpcServerStreaming} />
             </ListItem>
             <ListItem>
               Client streaming RPCs
-              <CodePane lang='go' source={grpcClientStreaming} />
+              <CodePane lang='javascript' source={grpcClientStreaming} />
             </ListItem>
             <ListItem>
               Bidirectional streaming RPCs
-              <CodePane lang='go' source={gRPCBidirectionalStreaming} />
+              <CodePane lang='javascript' source={gRPCBidirectionalStreaming} />
             </ListItem>
           </List>
         </Slide>
@@ -216,12 +209,12 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Architecture</Heading>
-          <Image padding={'20px 0px'} src={GeneralArch} height={400} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/g8LXlGj.png'} height={400} />
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Using gRPC with React</Heading>
           <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Make sure your webpack build supports commonjs modules.</Text>
-          <Image padding={'20px 0px'} src={Build} height={200} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/49bi9HB.png'} height={120} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Warning</Heading>
@@ -234,7 +227,7 @@ class Presentation extends Component {
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Example Project</Heading>
           <Text textAlign={'left'} textSize={36} padding={'5px 0px'} textColor='secondary'>github.com/JacobTheEvans/christmas-cards</Text>
-          <Image padding={'20px 0px'} src={ChristmasArch} height={370} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/tDA7kaw.png'} height={370} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
