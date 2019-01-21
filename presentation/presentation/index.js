@@ -134,6 +134,7 @@ class Presentation extends Component {
           </List>
           <CodePane
             theme='light'
+            textSize={14}
             lang='javascript'
             source={protobufExample}
           />
@@ -147,6 +148,7 @@ class Presentation extends Component {
           <Heading size={6} textColor='secondary' caps>Services</Heading>
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types.</Text>
           <CodePane
+            textSize={20}
             theme='light'
             lang='javascript'
             source={grpcServiceExample}
@@ -157,19 +159,19 @@ class Presentation extends Component {
           <List>
             <ListItem>
               Unary RPCs
-              <CodePane theme='light' lang='javascript' source={grpcUnary} />
+              <CodePane textSize={20} theme='light' lang='javascript' source={grpcUnary} />
             </ListItem>
             <ListItem>
               Server streaming RPCs
-              <CodePane theme='light' lang='javascript' source={grpcServerStreaming} />
+              <CodePane textSize={20} theme='light' lang='javascript' source={grpcServerStreaming} />
             </ListItem>
             <ListItem>
               Client streaming RPCs
-              <CodePane theme='light' lang='javascript' source={grpcClientStreaming} />
+              <CodePane textSize={20} theme='light' lang='javascript' source={grpcClientStreaming} />
             </ListItem>
             <ListItem>
               Bidirectional streaming RPCs
-              <CodePane theme='light' lang='javascript' source={gRPCBidirectionalStreaming} />
+              <CodePane textSize={20} theme='light' lang='javascript' source={gRPCBidirectionalStreaming} />
             </ListItem>
           </List>
         </Slide>
