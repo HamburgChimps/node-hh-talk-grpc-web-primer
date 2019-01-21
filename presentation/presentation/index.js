@@ -11,10 +11,6 @@ import {
   Text,
   CodePane
 } from 'spectacle'
-import WhatIsGrpcImage from '../assets/grpc.svg'
-import GeneralArch from '../assets/general.svg'
-import Build from '../assets/build.svg'
-import ChristmasArch from '../assets/arch.svg'
 
 // move to other files
 const protobufExample = `// The greeter service definition.
@@ -122,7 +118,7 @@ class Presentation extends Component {
           <BlockQuote>
             <Quote textSize={24}>In gRPC a client application can directly call methods on a server application on a different machine as if it was a local object, making it easier for you to create distributed applications and services. As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. On the server side, the server implements this interface and runs a gRPC server to handle client calls. On the client side, the client has a stub (referred to as just a client in some languages) that provides the same methods as the server.</Quote>
           </BlockQuote>
-          <Image padding={'20px 0px'} src={WhatIsGrpcImage} height={300} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/2zDVS5K.png'} height={300} />
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='tertiary'>
           <Heading size={6} textColor='secondary' caps>What are Protobufs?</Heading>
@@ -208,12 +204,12 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Architecture</Heading>
-          <Image padding={'20px 0px'} src={GeneralArch} height={400} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/g8LXlGj.png'} height={400} />
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Using gRPC with React</Heading>
           <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Make sure your webpack build supports commonjs modules.</Text>
-          <Image padding={'20px 0px'} src={Build} height={200} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/w2diNmm.png'} height={200} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Warning</Heading>
@@ -226,7 +222,7 @@ class Presentation extends Component {
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Example Project</Heading>
           <Text textAlign={'left'} textSize={36} padding={'5px 0px'} textColor='secondary'>github.com/JacobTheEvans/christmas-cards</Text>
-          <Image padding={'20px 0px'} src={ChristmasArch} height={370} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/w2diNmm.png'} height={370} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
