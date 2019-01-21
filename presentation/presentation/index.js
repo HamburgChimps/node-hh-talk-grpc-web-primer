@@ -209,7 +209,7 @@ class Presentation extends Component {
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Using gRPC with React</Heading>
           <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='secondary'>Make sure your webpack build supports commonjs modules.</Text>
-          <Image padding={'20px 0px'} src={'https://i.imgur.com/w2diNmm.png'} height={200} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/49bi9HB.png'} height={120} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Warning</Heading>
@@ -222,7 +222,7 @@ class Presentation extends Component {
         <Slide transition={['fade']} bgColor='primary' textColor='secondary'>
           <Heading size={5} textColor='secondary' caps>Example Project</Heading>
           <Text textAlign={'left'} textSize={36} padding={'5px 0px'} textColor='secondary'>github.com/JacobTheEvans/christmas-cards</Text>
-          <Image padding={'20px 0px'} src={'https://i.imgur.com/w2diNmm.png'} height={370} />
+          <Image padding={'20px 0px'} src={'https://i.imgur.com/tDA7kaw.png'} height={370} />
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
