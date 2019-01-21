@@ -160,26 +160,24 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='primary'>
           <Heading size={6} textColor='secondary' caps>Service Methods</Heading>
-          <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Unary RPCs where the client sends a single request to the server and gets a single response back, just like a normal function call.</Text>
-          <CodePane
-            lang='go'
-            source={grpcUnary}
-          />
-          <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Server streaming RPCs where the client sends a request to the server and gets a stream to read a sequence of messages back. The client reads from the returned stream until there are no more messages. gRPC guarantees message ordering within an individual RPC call.</Text>
-          <CodePane
-            lang='go'
-            source={grpcServerStreaming}
-          />
-          <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Client streaming RPCs where the client writes a sequence of messages and sends them to the server, again using a provided stream. Once the client has finished writing the messages, it waits for the server to read them and return its response. Again gRPC guarantees message ordering within an individual RPC call.</Text>
-          <CodePane
-            lang='go'
-            source={grpcClientStreaming}
-          />
-          <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Bidirectional streaming RPCs where both sides send a sequence of messages using a read-write stream. The two streams operate independently, so clients and servers can read and write in whatever order they like: for example, the server could wait to receive all the client messages before writing its responses, or it could alternately read a message then write a message, or some other combination of reads and writes. The order of messages in each stream is preserved.</Text>
-          <CodePane
-            lang='go'
-            source={gRPCBidirectionalStreaming}
-          />
+          <List>
+            <ListItem>
+              Unary RPCs
+              <CodePane lang='go' source={grpcUnary} />
+            </ListItem>
+            <ListItem>
+              Server streaming RPCs
+              <CodePane lang='go' source={grpcServerStreaming} />
+            </ListItem>
+            <ListItem>
+              Client streaming RPCs
+              <CodePane lang='go' source={grpcClientStreaming} />
+            </ListItem>
+            <ListItem>
+              Bidirectional streaming RPCs
+              <CodePane lang='go' source={gRPCBidirectionalStreaming} />
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='tertiary'>
           <Heading size={6} textColor='secondary' caps>Using these methods</Heading>
@@ -189,14 +187,12 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='primary'>
           <Heading size={6} textColor='secondary' caps>Other important concepts</Heading>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} x>Deadlines/Timeouts</Text>
-          <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>gRPC allows clients to specify how long they are willing to wait for an RPC to complete before the RPC is terminated with the error DEADLINE_EXCEEDED. On the server side, the server can query to see if a particular RPC has timed out, or how much time is left to complete the RPC.</Text>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>RPC Termination</Text>
-          <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>In gRPC, both the client and server make independent and local determinations of the success of the call, and their conclusions may not match. This means that, for example, you could have an RPC that finishes successfully on the server side (“I have sent all my responses!”) but fails on the client side (“The responses arrived after my deadline!”). It’s also possible for a server to decide to complete before a client has sent all its requests.</Text>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>Cancelling RPCs</Text>
-          <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>Either the client or the server can cancel an RPC at any time. A cancellation terminates the RPC immediately so that no further work is done. It is not an “undo”: changes made before the cancellation will not be rolled back.</Text>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>Metadata</Text>
-          <Text textAlign={'left'} padding={'5px 0px'} textSize={18} textColor='primary'>Metadata is information about a particular RPC call (such as authentication details) in the form of a list of key-value pairs, where the keys are strings and the values are typically strings (but can be binary data). Metadata is opaque to gRPC itself - it lets the client provide information associated with the call to the server and vice versa.</Text>
+          <List>
+            <ListItem>Deadlines/Timeouts</ListItem>
+            <ListItem>RPC Termination</ListItem>
+            <ListItem>Cancelling RPCs</ListItem>
+            <ListItem>Metadata</ListItem>
+          </List>
         </Slide>
         <Slide transition={['fade']} bgColor='primary'>
           <Heading size={1} fit caps lineHeight={1} textColor='secondary'>
