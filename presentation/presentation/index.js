@@ -125,6 +125,7 @@ class Presentation extends Component {
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>By default gRPC uses protocol buffers, Google’s mature open source mechanism for serializing structured data (although it can be used with other data formats such as JSON).</Text>
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>Protocol buffers are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data – think XML, but smaller, faster, and simpler. You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={protobufExample}
           />
@@ -138,6 +139,7 @@ class Presentation extends Component {
           <Heading size={6} textColor='secondary' caps>Services</Heading>
           <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={grpcServiceExample}
           />
@@ -146,21 +148,25 @@ class Presentation extends Component {
           <Heading size={6} textColor='secondary' caps>Service Methods</Heading>
           <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Unary RPCs where the client sends a single request to the server and gets a single response back, just like a normal function call.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={grpcUnary}
           />
           <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Server streaming RPCs where the client sends a request to the server and gets a stream to read a sequence of messages back. The client reads from the returned stream until there are no more messages. gRPC guarantees message ordering within an individual RPC call.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={grpcServerStreaming}
           />
           <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Client streaming RPCs where the client writes a sequence of messages and sends them to the server, again using a provided stream. Once the client has finished writing the messages, it waits for the server to read them and return its response. Again gRPC guarantees message ordering within an individual RPC call.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={grpcClientStreaming}
           />
           <Text textAlign={'left'} padding={'25px 0px 0px 0px'} textSize={16} textColor='primary'>Bidirectional streaming RPCs where both sides send a sequence of messages using a read-write stream. The two streams operate independently, so clients and servers can read and write in whatever order they like: for example, the server could wait to receive all the client messages before writing its responses, or it could alternately read a message then write a message, or some other combination of reads and writes. The order of messages in each stream is preserved.</Text>
           <CodePane
+            theme='light'
             lang='javascript'
             source={gRPCBidirectionalStreaming}
           />
