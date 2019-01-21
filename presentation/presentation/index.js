@@ -199,6 +199,7 @@ class Presentation extends Component {
           <Heading size={5} textColor='secondary' caps>What is gRPC WEb?</Heading>
           <BlockQuote>
             <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>gRPC web is a library that allows browsers to run gRPC</Text>
+            <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>It is a translation layer for browser based requests to the grpc protocol.</Text>
             <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>It providers a Code Generator Plugin for protoc that outputs browser ready code.</Text>
             <Text textAlign={'left'} textSize={32} padding={'5px 0px'} textColor='primary'>Check it out on github.com/gRPC/gRPC-web</Text>
           </BlockQuote>
