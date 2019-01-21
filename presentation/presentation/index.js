@@ -120,15 +120,26 @@ class Presentation extends Component {
         </Slide>
         <Slide transition={['fade']} bgColor='tertiary' textColor='primary'>
           <Heading size={5} textColor='secondary' caps>What is gRPC?</Heading>
-          <BlockQuote>
-            <Quote textSize={24}>In gRPC a client application can directly call methods on a server application on a different machine as if it was a local object, making it easier for you to create distributed applications and services. As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. On the server side, the server implements this interface and runs a gRPC server to handle client calls. On the client side, the client has a stub (referred to as just a client in some languages) that provides the same methods as the server.</Quote>
-          </BlockQuote>
+          <List>
+            <ListItem>Remote Procedure Call framework</ListItem>
+            <ListItem>Streaming, Bidirectional streaming</ListItem>
+            <ListItem>Built-in security and authentication</ListItem>
+            <ListItem>Rich Ecosystem: Tracing, balancing, tooling</ListItem>
+            <ListItem>Uses HTTP/2 for transport</ListItem>
+            <ListItem>Support on all major languages</ListItem>
+            <ListItem>Uses Protocol Buffers by default</ListItem>
+          </List>
           <Image padding={'20px 0px'} src={WhatIsGrpcImage} height={300} />
         </Slide>
         <Slide transition={['fade']} bgColor='primary' textColor='tertiary'>
           <Heading size={6} textColor='secondary' caps>What are Protobufs?</Heading>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>By default gRPC uses protocol buffers, Google’s mature open source mechanism for serializing structured data (although it can be used with other data formats such as JSON).</Text>
-          <Text textAlign={'left'} padding={'10px 0px'} textSize={24} textColor='secondary'>Protocol buffers are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data – think XML, but smaller, faster, and simpler. You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.</Text>
+          <List>
+            <ListItem>Interface description language</ListItem>
+            <ListItem>Strongly-typed</ListItem>
+            <ListItem>Serialization format (binary)</ListItem>
+            <ListItem>Compact</ListItem>
+            <ListItem>Forward- and Backward-compatible</ListItem>
+          </List>
           <CodePane
             lang='go'
             source={protobufExample}
