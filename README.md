@@ -5,8 +5,6 @@ This repo is for the gRPC-web Primer talk given by
 
 [Slides](hamburgchimps.github.io/node-hh-talk-grpc-web-primer/#/)
 
-[Video of talk]()
-
 [Meetup Link](https://www.meetup.com/node-HH/events/258132048/)
 
 
